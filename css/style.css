@@ -179,6 +179,11 @@ body {
   background-color: rgba(90, 88, 88, 0.594);
   display: flex;
   border-radius: var(--radius);
+  transition: all 0.5s ease;
+}
+.row .seat:hover {
+  border: 3px solid rgb(48, 142, 48);
+  transform: translateY(-3px);
 }
 
 .row .seat {
@@ -202,10 +207,6 @@ body {
 
 .seat.occupied {
   background-color: #fff;
-}
-
-.seat.occupied:hover {
-  cursor: default;
 }
 
 .selected {
