@@ -1,40 +1,60 @@
-//element
+// //element
 
-const movieEl= document.getElementById('movie');
+const movieEl = document.getElementById('movie');
 
-const seatEl= document.querySelectorAll('.row .seat:not(occupied)');
+const seatEl = document.querySelectorAll('.row .seat:not(.occupied');
 
-const seatsCount= document.getElementById('seats-count');
+const seatsCountEl = document.querySelector('.seats-count');
 
-const totalPrice = document.getElementById('total-price');
+const totalPriceEl = document.querySelector('.total-price');
 
-console.log(seatEl);
+//function
+const init = function () {
+  seatsCountEl.innerText = seatCount;
+  totalPriceEl.innerText = seatCount * moviePrice;
+};
 
 //global variable
 let seatCount = 0;
 let moviePrice = movieEl.value;
+// console.log(moviePrice);
+//initial settings
+seatsCountEl.innerText = seatCount;
+totalPriceEl.innerText = seatCount * moviePrice;
+//event listener
+movieEl.addEventListener('change', () => {
+  moviePrice = movieEl.value;
+  init();
+});
 
-const init = function () {
-  seatCountEl.innerText = seatCount;
-  totalPriceEl.innerText = seatCount * moviePrice;
+for (let i = 0; i < seatEl.length; i++) {
+  seatEl[i].addEventListener('click', () => {
+    if (seatEl[i].classList.contains('selected')) {
+      seatEl[i].classList.remove('selected');
+    } else {
+      seatEl[i].classList.add('selected');
+    }
+  });
+
+  let selectedSeats = document.querySelectorAll('.row .seat.selected');
+  console.log(selectedSeats);
+  seatCount = selectedSeats.length;
+  init();
 }
 
-//initial setting
-seatCountEl.innerText = seatCount;
-totalPriceEl.innerText = seatCount * moviePrice;
+// for (let i = 0; i < seatEl.length; i++) {
+//   seatEl[i].addEventListeners('click', () => {
+//     if (seatEl[i].classList.contains('selected')) {
+//       seatEl[i].classList.remove('selected');
+//     } else {
+//       seatEl[i].classList.remove('selected');
+//     }
 
-//eventlistener
+//     let selectedSeats = document.querySelectorAll('.row .seat.selected');
+//     seatCount = selectedSeats.length;
+//     init();
+//   });
+// }
 
-movieEl.addEventListener('change',() => {
-  moviePrice - movieEl.value;
-
-  init();
-});   
-
-for(let i = 0; i , seatEl.length; i++) {
-  seatEl[i].addEventListener('click', () => {
-    if(seatEl[i].classList.container('selected')) {
-      seatEl[i].classList.remove('selected');
-    } 
-  })
-} 
+//user wil select movie and seat so we will update total price
+//if select a non selected seats we will update seat status
