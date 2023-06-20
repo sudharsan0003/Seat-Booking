@@ -34,12 +34,12 @@ for (let i = 0; i < seatEl.length; i++) {
     } else {
       seatEl[i].classList.add('selected');
     }
-  });
 
-  let selectedSeats = document.querySelectorAll('.row .seat.selected');
-  console.log(selectedSeats);
-  seatCount = selectedSeats.length;
-  init();
+    let selectedSeats = document.querySelectorAll('.row .seat.selected');
+    // console.log(selectedSeats);
+    seatCount = selectedSeats.length;
+    init();
+  });
 }
 
 // for (let i = 0; i < seatEl.length; i++) {
