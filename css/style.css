@@ -28,10 +28,6 @@
   --fixed-width: 450px;
 }
 
-html {
-  font-size: 24px;
-}
-
 body {
   font-family: var(--ff-roboto);
 }
@@ -43,68 +39,6 @@ ol {
 }
 a {
   text-decoration: none;
-}
-h1,
-h2,
-h3,
-h4 {
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
-}
-h1 {
-  font-size: 2rem;
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.25rem;
-}
-h4 {
-  font-size: 0.875rem;
-}
-p {
-  margin-bottom: 1.25rem;
-}
-@media screen and (min-width: 992px) {
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 1.75rem;
-  }
-  h4 {
-    font-size: 1rem;
-  }
-  body {
-    font-size: 1rem;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
-  }
-}
-/*  global classes */
-
-/* section */
-.section,
-.container {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: var(--max-width);
-}
-
-@media screen and (min-width: 992px) {
-  .section {
-    width: 95vw;
-  }
 }
 
 body {
@@ -123,24 +57,27 @@ body {
 }
 
 .main-title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 800;
+  margin: 1rem auto;
 }
 
 .movie-container {
   display: flex;
   gap: 1rem;
-  font-size: 28px;
+  font-size: 18px;
+  margin-bottom: 1rem;
 }
 
 .movie-pick {
-  padding: 0.25rem 2rem;
-  font-size: 24px;
+  padding: 0.25rem 1rem;
+  font-size: 14px;
   border: 4px solid #fff;
   border-radius: 0.5rem;
 }
 
 .legend-container {
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -156,9 +93,12 @@ body {
   align-items: center;
   gap: 0.5rem;
 }
-
+.messages {
+  font-size: 20px;
+  text-align: left;
+}
 .notify {
-  text-align: center;
+  margin-left: 5rem;
   font-weight: 300;
   letter-spacing: 0.2rem;
   margin-bottom: -1rem;
@@ -167,7 +107,7 @@ body {
 
 .blank-screen {
   height: 5rem;
-  width: 23.5rem;
+  width: 19rem;
   background-color: #fff;
   margin: 1rem;
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.4);
@@ -176,7 +116,9 @@ body {
   /* border-radius: 4px; */
   /* transform: rotateX(-45deg); */
 }
-
+.seats-container {
+  width: 80%;
+}
 .seats-count {
   color: var(--clr-blue-green);
 }
